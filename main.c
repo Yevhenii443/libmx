@@ -562,14 +562,14 @@ int main(void) {
 //        mx_push_front(&sort_new_list, (void *) 33);
 //        mx_push_front(&sort_new_list, (void *) 1);
 //        mx_printstr("mx_sort_list return 1 2 3 4 5 13 33 43 923? | ");
-//        mx_sort_list(sort_new_list, cmp_sort_list);
+////        mx_sort_list(sort_new_list, cmp_sort_list);
 //        for (int i = 0; sort_new_list; i++) {
 //            int buf = (int)sort_new_list->data;
 //            mx_printint(buf); mx_printstr(" ");
 //            sort_new_list = sort_new_list->next;
 //        }
 //        mx_printstr("\n");
-//
+
 //    mx_printstr("\n\n----------------MX_ATOI-------------------\n");
 //    mx_printint(mx_atoi("-2147483648")); mx_printstr("\n");
 //    mx_printint(mx_atoi("-11")); mx_printstr("\n");
