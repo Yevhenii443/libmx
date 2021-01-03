@@ -45,7 +45,6 @@ uninstall: clean
 
 clean:
 	@$(RM) $(OBJ_DIR) a.out
-	@afplay ~/Downloads/oh-shit-im-sorry_0001.mp3
 
 debug:
 	@cp $(SRC_FILES) .
@@ -56,6 +55,5 @@ reinstall: uninstall all
 
 start: all
 	@$(CC) $(C_FLAGS) -I $(INC_DIR) main.c $(NAME); $(RM) a.out.dSYM/; ./a.out
-	@afplay ~/Downloads/chewbacca.swf.mp3
 
 .PHONY: all uninstall clean reinstall

@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <malloc/malloc.h>
+#include <fcntl.h>
 
 void mx_printchar(char c); //done
 void mx_print_unicode(wchar_t c); //
@@ -45,9 +46,9 @@ char *mx_del_extra_spaces(const char *str); //done
 char **mx_strsplit(const char *s, char c); //done
 int mx_count_letters(const char *s, char c); //done
 char *mx_strjoin(const char *s1, const char *s2); //done
-char *mx_file_to_str(const char *file); //
-char *mx_replace_substr(const char *str, const char *sub, const char *replace); //
-int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd); //
+char *mx_file_to_str(const char *file); //done
+char *mx_replace_substr(const char *str, const char *sub, const char *replace); //done
+int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd); // ().()
 void *mx_memset(void *b, int c, size_t len); //done
 void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n); //done
 void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n); //done
@@ -56,7 +57,7 @@ void *mx_memchr(const void *s, int c, size_t n); //done
 void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len); //done
 void *mx_memmove(void *dst, const void *src, size_t len); //done
 void *mx_realloc(void *ptr, size_t size); //
-
+void *mx_memrchr(const void *s, int c, size_t n); //done
 typedef struct s_list {
   void *data;
   struct s_list *next;

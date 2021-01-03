@@ -1,10 +1,12 @@
 #include "../inc/libmx.h"
 
-void *mx_memmove(void *dst, const void *src, size_t len) {
-    unsigned char *tmp = malloc(len);
-
-    tmp = mx_memcpy(tmp, src, len);
-    dst = mx_memcpy(dst, tmp, len);
-    free(tmp);
-    return dst;
+void mx_print_strarr(char **arr, const char *delim) {
+    if (arr && delim) {
+        for (int i = 0; arr[i] != NULL; i++) {
+            if (i != 0)
+                mx_printstr(delim);
+            mx_printstr(arr[i]);
+        }
+        mx_printstr("\n");
+    }
 }
